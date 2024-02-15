@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/contactus.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=roboto" rel="stylesheet">
+
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="stylesheets/swiper-bundle.min.css" />
+</head>
+<body>
+    
+   
+        
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="logo_item">
+      <i class="bx bx-menu" id="sidebarOpen"></i>
+      
+    </div>
+
+    <div class="search_bar">
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <div class="navbar_content">
+      <i class="bi bi-grid"></i>
+      <i class='bx bx-sun' id="darkLight"></i>
+       <!-- Cart Icon -->
+       <div class="cart-icon">
+        <i class='bx bx-shopping-bag' id="cartTab" ></i>
+<span class="quantity">0</span>
+        <!-- Shopping Cart Tab -->
+
+
+        <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart" id="cartList">
+              
+              <!-- Cart items will be displayed here -->
+            <div class="quantity">
+              
+            </div>
+          </div>
+          
+            <div class="checkout">
+              <div class="total"> Total :R 0 </div>
+                
+              <button class="checkOut" onclick="PaymentRequest()">Check Out</button>
+
+            </div>
+        </div>
+    </div>
+
+      
+    <div class="login-button" onclick="redirectToLogin()">
+      <span>Login</span>
+    </div>
+  
+</div>
+  </div>
+    
+        
+
+     
+      
+    </div>
+  </nav>
+
+  <!-- sidebar -->
+  <nav class="sidebar">
+    <div class="menu_content">
+      <ul class="menu_items">
+        <div class="menu_title menu_"></div>
+        <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+        <!-- start -->
+        <li class="item">
+          <a href="index.html" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class="bx bx-home-alt"></i>
+            </span>
+            <span class="navlink">Home</span>
+          </a>
+        </li>
+
+      
+        <!-- end -->
+       
+       
+        <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+        <!-- start -->
+        <li class="item">
+          <div href="#" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class="bx bx-cart-alt"></i>
+            </span>
+            <span class="navlink">Shop</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+          </div>
+
+          <ul class="menu_items submenu">
+            <li><a href="Equipment.html" class="nav_link sublink">Equipment</a></li>
+            <li><a href="clothing.html" class="nav_link sublink">Clothing</a></li>
+            <li><a href="accessories.html" class="nav_link sublink">Accessories</a></li>
+        </ul>
+        
+        </li>
+        <li class="item">
+          <div href="#" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class='bx bx-briefcase'></i>
+            </span>
+            <span class="navlink">Services</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+          </div>
+
+          <ul class="menu_items submenu">
+            <a href="membership.html" class='nav_link sublink' ></i>Membership</a>
+            <a href="livesection.html" class="nav_link sublink">Live Workouts</a>
+            <a href="recording.html" class="nav_link sublink">Recordings</a>
+            
+            
+          </ul>
+        <li class="item">
+            <a href="reviews.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-star"></i>
+              </span>
+              <span class="navlink">Reviews</span>
+            </a>
+          </li>
+  
+          <li class="item">
+            <a href="aboutUs.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-info-circle"></i>
+              </span>
+              <span class="navlink">About Us</span>
+            </a>
+          </li>
+  
+          <li class="item">
+            <a href="contactus.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-envelope"></i>
+              </span>
+              <span class="navlink">Contact Us</span>
+            </a>
+          </li>
+  
+          <li class="item">
+            <a href="privacy.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-shield"></i>
+              </span>
+              <span class="navlink">Privacy Policy</span>
+            </a>
+          </li>
+        </ul>
+  
+ 
+          
+   
+
+      <!-- Sidebar Open / Close -->
+      <div class="bottom_content">
+        <div class="bottom expand_sidebar">
+          <span> Expand</span>
+          <i class='bx bx-log-in' ></i>
+        </div>
+        <div class="bottom collapse_sidebar">
+          <span> Collapse</span>
+          <i class='bx bx-log-out'></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="wrapper">
+    <header>Contact Us</header>
+    <form action="#">
+      <div class="dbl-field">
+        <div class="field">
+        <input type="text"  name="name" placeholder="Enter your name">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="field">
+        <input type="text" name="email" placeholder="Enter your email">
+        <i class="fas fa-envelope"></i>
+      </div>
+    </div>
+    <div class="dbl-field">
+      <div class="field">
+      <input type="text" name="phone" placeholder="Enter your phone">
+      <i class="fas fa-phone-alt"></i>
+    </div>
+
+  </div>
+  <div class="message">
+    <textarea placeholder="write your messsage"></textarea>
+    <!-- <i class="fas fa-message">message</i> -->
+  </div>
+  <div class="button-area">
+    <button type="submit">Send Message</button>
+
+  </div>
+    </form>
+  </div>
+
+  <footer>
+    <h1>Contact-Us</h1>
+  </footer>
+
+    <script src="javascript/cart.js"></script>
+
+
+
+  <script src="contact.js"></script>
+
+
+
+    <!-- Swiper JS -->
+    <script src="javascript/swiper-bundle.min.js"></script>
+    <script src="javascript/script.js"></script>
+
+
+
+</body>
+</html>
