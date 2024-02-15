@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=roboto" rel="stylesheet">
+
+
+
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="stylesheets/swiper-bundle.min.css" />
+</head>
+<body>
+    
+   
+        
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="logo_item">
+      <i class="bx bx-menu" id="sidebarOpen"></i>
+      
+    </div>
+
+    <div class="search_bar">
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <div class="navbar_content">
+      <i class="bi bi-grid"></i>
+      <i class='bx bx-sun' id="darkLight"></i>
+       <!-- Cart Icon -->
+       <div class="cart-icon">
+        <i class='bx bx-shopping-bag' id="cartTab" ></i>
+<span class="quantity">0</span>
+        <!-- Shopping Cart Tab -->
+
+
+        <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart" id="cartList">
+              
+              <!-- Cart items will be displayed here -->
+            <div class="quantity">
+              
+            </div>
+          </div>
+          
+            <div class="checkout">
+              <div class="total"> Total :R 0 </div>
+                
+              <button class="checkOut" onclick="PaymentRequest()">Check Out</button>
+
+            </div>
+        </div>
+    </div>
+
+      
+    <div class="login-button" onclick="redirectToLogin()">
+      <span>Login</span>
+    </div>
+  
+</div>
+  </div>
+    
+        
+
+     
+      
+    </div>
+  </nav>
+
+  <!-- sidebar -->
+  <nav class="sidebar">
+    <div class="menu_content">
+      <ul class="menu_items">
+        <div class="menu_title menu_"></div>
+        <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+        <!-- start -->
+        <li class="item">
+          <a href="index.html" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class="bx bx-home-alt"></i>
+            </span>
+            <span class="navlink">Home</span>
+          </a>
+        </li>
+
+      
+        <!-- end -->
+       
+       
+        <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+        <!-- start -->
+        <li class="item">
+          <div href="#" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class="bx bx-cart-alt"></i>
+            </span>
+            <span class="navlink">Shop</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+          </div>
+
+          <ul class="menu_items submenu">
+            <li><a href="Equipment.html" class="nav_link sublink">Equipment</a></li>
+            <li><a href="clothing.html" class="nav_link sublink">Clothing</a></li>
+            <li><a href="accessories.html" class="nav_link sublink">Accessories</a></li>
+        </ul>
+        
+        </li>
+        <li class="item">
+          <div href="#" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class='bx bx-briefcase'></i>
+            </span>
+            <span class="navlink">Services</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+          </div>
+
+          <ul class="menu_items submenu">
+            <a href="membership.html" class='nav_link sublink' ></i>Membership</a>
+            <a href="livesection.html" class="nav_link sublink">Live Workouts</a>
+            <a href="recording.html" class="nav_link sublink">Recordings</a>
+            
+            
+          </ul>
+        <li class="item">
+            <a href="reviews.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-star"></i>
+              </span>
+              <span class="navlink">Reviews</span>
+            </a>
+          </li>
+  
+          <li class="item">
+            <a href="aboutUs.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-info-circle"></i>
+              </span>
+              <span class="navlink">About Us</span>
+            </a>
+          </li>
+  
+          <li class="item">
+            <a href="contactus.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-envelope"></i>
+              </span>
+              <span class="navlink">Contact Us</span>
+            </a>
+          </li>
+  
+          <li class="item">
+            <a href="privacy.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-shield"></i>
+              </span>
+              <span class="navlink">Privacy Policy</span>
+            </a>
+          </li>
+        </ul>
+  
+ 
+          
+   
+
+      <!-- Sidebar Open / Close -->
+      <div class="bottom_content">
+        <div class="bottom expand_sidebar">
+          <span> Expand</span>
+          <i class='bx bx-log-in' ></i>
+        </div>
+        <div class="bottom collapse_sidebar">
+          <span> Collapse</span>
+          <i class='bx bx-log-out'></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+        
+   
+
+<section>
+  <div id="home" class="back">
+    <video autoplay loop muted playsinline>
+        <!-- Provide the correct path to your video file -->
+        <source src="video/video2.mp4" type="video/mp4">
+    </video>
+    <div class="mian-home">
+        <div class="inner-home">
+        </div>
+        <div class="inner-home">
+            <div class="inner-content">
+                <h1>Welcome To Fitness Hub</h1>
+                <p>Unlock Your Potential
+                    Achieve Your Fitness Goals With Us</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section>
+
+<div class="mian-home">
+  <div class="inner-home">
+  </div>
+  <div class="inner-home">
+      <div class="inner-content">
+          
+          <p>At FitnessHub, we understand the importance of convenience in our post-
+            COVID-19 world. With the increasing demand for fitness solutions, many individuals face
+            challenges in accessing high-quality fitness equipment, commuting to a gym, and maintaining
+            a healthy and balanced lifestyle.</p>
+
+
+
+        <p>Our mission is to provide a solution that empowers fitness enthusiasts,
+          beginners, and athletes to achieve and maximize their fitness goals with ease, all within the
+          comfort of their own homes. We eliminate the need to visit a gym or fitness center by offering
+          a carefully curated selection of top-class sports and fitness equipment and accessories. Our
+          commitment is to provide you with the tools you need to stay fit, healthy, and stress-free at
+          home.</p>
+      </div>
+  </div>
+</div>
+</section>
+<section id="equipment" class="my-5 py-5">
+
+  <div class="container text-center mt-5 py-5">
+<h3>  Featured Products</h3>
+<hr class="mx-auto"> 
+<p>Here you can check out our latest products with fair price.</p>
+  </div>
+  <div class=" row mx-auto container-fluid">
+    <div class=" product text text-center col-lg-3 col-md-4 col-12 ">
+    <img class="img-fluid mb-3" src="images/shoe1.jpg" alt=" ">
+    <div class="star">
+      <i class='bx bxs-star bx-tada'></i>
+      <i class='bx bxs-star bx-tada'></i>
+      <i class='bx bxs-star bx-tada'></i>
+      <i class='bx bxs-star bx-tada'></i>
+      <i class='bx bxs-star bx-tada'></i>
+    </div>
+    <h5 class="p-name" > maxed shoe </h5>
+    <h4 class="p-price" >R239 </h4>
+      
+      <button class="buy-btn" data-product-id="1" data-product-name="Adjustment Steel" data-product-price="R239" data-product-image="images/pro4.jpeg" onclick="addToCart(this)">ADD TO CART</button>
+      <button class="view-clothing-btn" onclick="redirectToClothing()">VIEW CLOTHING/Gear</button>
+
+    </div>
+    <div class=" product text text-center col-lg-3 col-md-4 col-12 ">
+      <img class="img-fluid mb-3" src="images/equipment1.jpg" alt=" ">
+      <div class="star">
+        <i class='bx bxs-star bx-tada'></i>
+        <i class='bx bxs-star bx-tada'></i>
+        <i class='bx bxs-star bx-tada'></i>
+        <i class='bx bxs-star bx-tada'></i>
+        <i class='bx bxs-star bx-tada'></i>
+      </div>
+      <h5 class="p-name" > watch</h5>
+      <h4 class="p-price" >R400 </h4>
+        <button class="buy-btn" data-product-id="2" data-product-name="watch" data-product-price="R7392" data-product-image="images/pro5.jpeg" onclick="addToCart(this)">ADD TO CART</button>
+        <button class="view-clothing-btn" onclick="">VIEW Equipment</button>
+
+      </div>
+      <div class=" product text text-center col-lg-3 col-md-4 col-12 ">
+        <img class="img-fluid mb-3" src="images/accessories1.jpg" alt=" ">
+        <div class="star">
+          <i class='bx bxs-star bx-tada'></i>
+          <i class='bx bxs-star bx-tada'></i>
+          <i class='bx bxs-star bx-tada'></i>
+          <i class='bx bxs-star bx-tada'></i>
+          <i class='bx bxs-star bx-tada'></i>
+        </div>
+        <h5 class="p-name" > Minimbike </h5>
+        <h4 class="p-price" >R1299 </h4>
+          <button class="buy-btn" data-product-id="3" data-product-name="Minimbike" data-product-price="R1299" data-product-image="images/pro6.jpeg" onclick="addToCart(this)">ADD TO CART</button>
+
+          <button class="view-clothing-btn" onclick="">VIEW Accessories</button>
+
+        </div>
+  </div>
+    
+    </section>
+    </div>
+
+              </div>
+                <section id="banner">
+                  <div class="container">
+                  <h4></h4>
+                  <h1>Unlock Your Potential with Fitness Hub<br>Discover a World of Fitness Solutions</h1>
+                  <button class="text -uppercase" >Learn more</button>
+                  </div>
+                  </section>
+
+
+
+  
+
+<!-- contact us -->
+
+<section class = "contact-section">
+  <div class = "contact-bg">
+    <h3>Get in Touch with Us</h3>
+    <h2>contact us</h2>
+    <div class = "line">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class = "text">Welcome to FitnessHub! We're thrilled to connect with you.
+      Whether you have questions about our services, need assistance, or just want to say hello, we're here for you.
+      Choose the method that suits you best, and let's start the conversation.</p>
+
+  </div>
+
+
+  <div class = "contact-body">
+    <div class = "contact-info">
+      <div>
+        <span><i class = "fas fa-mobile-alt"></i></span>
+        <span>Phone No.</span>
+        <span class = "text">(+27) 11-434-5879</span>
+      </div>
+      <div>
+        <span><i class = "fas fa-envelope-open"></i></span>
+        <span>E-mail</span>
+        <span class = "text">fitnesshub@gmail.com</span>
+      </div>
+      <div>
+        <span><i class = "fas fa-map-marker-alt"></i></span>
+        <span>Address</span>
+        <span class = "text">123 Fitness Plaza, Cityville, Gauteng, South Africa</span>
+      </div>
+      <div>
+        <span><i class = "fas fa-clock"></i></span>
+        <span>Opening Hours</span>
+        <span class = "text">Monday - Friday (9:00 AM to 5:00 PM)</span>
+      </div>
+    </div>
+
+    <div class = "contact-form">
+      <form>
+        <div>
+          <input type = "text" class = "form-control" placeholder="First Name">
+          <input type = "text" class = "form-control" placeholder="Last Name">
+        </div>
+        <div>
+          <input type = "email" class = "form-control" placeholder="E-mail">
+          <input type = "text" class = "form-control" placeholder="Phone">
+        </div>
+        <textarea rows = "5" placeholder="Message" class = "form-control"></textarea>
+        <input type = "submit" class = "send-btn" value = "send message">
+      </form>
+
+      <div>
+        <img src = "images/contact-png.png" alt = "">
+      </div>
+    </div>
+  </div>
+
+  <div class = "contact-footer">
+    <h3>Follow Us</h3>
+    <div class="social-links">
+      <a href="https://www.facebook.com/FitnessHub_community" target="_blank">
+        <i class="bx bxl-facebook-square" style="color:#4074da;"></i>
+      </a>
+      <a href="https://twitter.com/FitnessHub_123" target="_blank">
+        <i class="bx bxl-twitter" style="color:#4074da;"></i>
+      </a>
+      <a href="https://www.instagram.com/FitnessHub_" target="_blank">
+        <i class="bx bxl-instagram" style="color:#4074da;"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/FitnessHub_live" target="_blank">
+        <i class="bx bxl-linkedin-square" style="color:#4074da;"></i>
+      </a>
+      <a href="https://www.youtube.com/FitnessHub_live" target="_blank">
+        <i class="bx bxl-youtube" style="color:#e01417;"></i>
+      </a>
+    </div>
+</section>
+
+  <!-- Copyright and Powered by FitnessHub -->
+  <div class="ast-footer-copyright">
+    <p>Copyright © 2023 FitnessHub</p>
+  </div>
+
+  <div class="ast-builder-html-element">
+    <p>Powered by FitnessHub</p>
+  </div>
+
+
+
+  <button class="chatbot-toggler">
+  <span class="material-symbols-rounded">mode_comment</span>
+  <span class="material-symbols-outlined">close</span>
+</button>
+<div class="chatbot">
+  <header>
+    <h2>Chatbot</h2>
+    <span class="close-btn material-symbols-outlined">close</span>
+  </header>
+  <ul class="chatbox">
+    <li class="chat incoming">
+      <span class="material-symbols-outlined">smart_toy</span>
+      <p>Hi there 👋<br>How can I help you today?</p>
+    </li>
+  </ul>
+  <div class="chat-input">
+    <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+    <span id="send-btn" class="material-symbols-rounded">send</span>
+  </div>
+</div>
+
+    <!-- Swiper JS -->
+    <script src="javascript/swiper-bundle.min.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
